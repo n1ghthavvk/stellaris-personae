@@ -1,0 +1,595 @@
+@triumph_duration_veryshort = 900
+@triumph_duration_extremely_short = 600
+
+namespace = story
+
+# Surveyor Activated
+country_event = {
+	# event, which will no longer be used
+	id = story.335
+	title = story.335.name
+	desc = "Choose a planetoid within your borders to scan."
+	picture = GFX_evt_mining_operations
+	location = event_target:chosen_planet
+	is_triggered_only = yes
+
+	immediate = {
+		random_planet_within_border = {
+			limit = {
+				habitable_planet = no
+			}
+			save_event_target_as = chosen_planet_1
+		}
+		random_planet_within_border = {
+			limit = {
+				habitable_planet = no
+				NOT = {
+					is_same_value = event_target:chosen_planet_1
+				}
+			}
+			save_event_target_as = chosen_planet_2
+		}
+		random_planet_within_border = {
+			limit = {
+				habitable_planet = no
+				NOT = {
+					is_same_value = event_target:chosen_planet_1
+				}
+				NOT = {
+					is_same_value = event_target:chosen_planet_2
+				}
+			}
+			save_event_target_as = chosen_planet_3
+		}
+		random_planet_within_border = {
+			limit = {
+				habitable_planet = no
+				NOT = {
+					is_same_value = event_target:chosen_planet_1
+				}
+				NOT = {
+					is_same_value = event_target:chosen_planet_2
+				}
+				NOT = {
+					is_same_value = event_target:chosen_planet_3
+				}
+			}
+			save_event_target_as = chosen_planet_4
+		}
+		random_planet_within_border = {
+			limit = {
+				habitable_planet = no
+				NOT = {
+					is_same_value = event_target:chosen_planet_1
+				}
+				NOT = {
+					is_same_value = event_target:chosen_planet_2
+				}
+				NOT = {
+					is_same_value = event_target:chosen_planet_3
+				}
+				NOT = {
+					is_same_value = event_target:chosen_planet_4
+				}
+			}
+			save_event_target_as = chosen_planet_5
+		}
+	}
+	option = {
+		name = [chosen_planet_1.GetName]
+		event_target:chosen_planet_1 = {
+			save_global_event_target_as = chosen_planet
+		}
+		country_event = {
+			id = story.3336
+		}
+	}
+	option = {
+		name = [chosen_planet_2.GetName]
+		event_target:chosen_planet_2 = {
+			save_global_event_target_as = chosen_planet
+		}
+		country_event = {
+			id = story.3336
+		}
+	}
+	option = {
+		name = [chosen_planet_3.GetName]
+		event_target:chosen_planet_3 = {
+			save_global_event_target_as = chosen_planet
+		}
+		country_event = {
+			id = story.3336
+		}
+	}
+	option = {
+		name = [chosen_planet_4.GetName]
+		event_target:chosen_planet_4 = {
+			save_global_event_target_as = chosen_planet
+		}
+		country_event = {
+			id = story.3336
+		}
+	}
+	option = {
+		name = [chosen_planet_5.GetName]
+		event_target:chosen_planet_5 = {
+			save_global_event_target_as = chosen_planet
+		}
+		country_event = {
+			id = story.3336
+		}
+	}
+	option = {
+		name = "Choose another planetoid."
+		country_event = {
+			id = story.335
+		}
+	}
+}
+
+# Surveyor Activated
+country_event = {
+	id = story.3336
+	title = story.335.name
+	desc = story.335.desc
+	picture = GFX_evt_mining_operations
+	location = event_target:chosen_planet
+	is_triggered_only = yes
+
+	option = {
+		name = story.3336.option.energy
+		trigger = {
+			event_target:chosen_planet = {
+				energy_candidate = yes
+			}
+		}
+		locked_random_list = {
+			# Energy
+			10 = {
+				modifier = {
+					factor = 0
+					event_target:chosen_planet = {
+						energy_candidate = no
+					}
+				}
+				event_target:chosen_planet = {
+					add_deposit = d_energy_5
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					event_target:chosen_planet = {
+						energy_candidate = no
+					}
+				}
+				event_target:chosen_planet = {
+					add_deposit = d_energy_7
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					event_target:chosen_planet = {
+						energy_candidate = no
+					}
+				}
+				event_target:chosen_planet = {
+					add_deposit = d_energy_9
+				}
+			}
+		}
+	}
+
+	option = {
+		name = story.3336.option.minerals
+		trigger = {
+			event_target:chosen_planet = {
+				mineral_candidate = yes
+			}
+		}
+		locked_random_list = {
+			# Minerals
+			10 = {
+				modifier = {
+					factor = 0
+					event_target:chosen_planet = {
+						mineral_candidate = no
+					}
+				}
+				event_target:chosen_planet = {
+					add_deposit = d_minerals_5
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					event_target:chosen_planet = {
+						mineral_candidate = no
+					}
+				}
+				event_target:chosen_planet = {
+					add_deposit = d_minerals_7
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					event_target:chosen_planet = {
+						mineral_candidate = no
+					}
+				}
+				event_target:chosen_planet = {
+					add_deposit = d_minerals_9
+				}
+			}
+		}
+	}
+
+	option = {
+		name = story.3336.option.physics
+		trigger = {
+			event_target:chosen_planet = {
+				research_candidate = yes
+			}
+		}
+		locked_random_list = {
+			# Physics
+			10 = {
+				modifier = {
+					factor = 0
+					event_target:chosen_planet = {
+						research_candidate = no
+					}
+				}
+				event_target:chosen_planet = {
+					add_deposit = d_physics_5
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					event_target:chosen_planet = {
+						research_candidate = no
+					}
+				}
+				event_target:chosen_planet = {
+					add_deposit = d_physics_7
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					event_target:chosen_planet = {
+						research_candidate = no
+					}
+				}
+				event_target:chosen_planet = {
+					add_deposit = d_physics_9
+				}
+			}
+		}
+	}
+
+	option = {
+		name = story.3336.option.society
+		trigger = {
+			event_target:chosen_planet = {
+				research_candidate = yes
+			}
+		}
+		locked_random_list = {
+			# Society
+			10 = {
+				modifier = {
+					factor = 0
+					event_target:chosen_planet = {
+						research_candidate = no
+					}
+				}
+				event_target:chosen_planet = {
+					add_deposit = d_society_5
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					event_target:chosen_planet = {
+						research_candidate = no
+					}
+				}
+				event_target:chosen_planet = {
+					add_deposit = d_society_7
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					event_target:chosen_planet = {
+						research_candidate = no
+					}
+				}
+				event_target:chosen_planet = {
+					add_deposit = d_society_9
+				}
+			}
+		}
+	}
+
+	option = {
+		name = story.3336.option.engineering
+		trigger = {
+			event_target:chosen_planet = {
+				research_candidate = yes
+			}
+		}
+		locked_random_list = {
+			# Engineering
+			10 = {
+				modifier = {
+					factor = 0
+					event_target:chosen_planet = {
+						research_candidate = no
+					}
+				}
+				event_target:chosen_planet = {
+					add_deposit = d_engineering_5
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					event_target:chosen_planet = {
+						research_candidate = no
+					}
+				}
+				event_target:chosen_planet = {
+					add_deposit = d_engineering_7
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					event_target:chosen_planet = {
+						research_candidate = no
+					}
+				}
+				event_target:chosen_planet = {
+					add_deposit = d_engineering_9
+				}
+			}
+		}
+	}
+
+	option = {
+		name = story.3336.option.trade_income
+		trigger = {
+			is_gestalt = no
+		}
+		locked_random_list = {
+			# Trade
+			10 = {
+				modifier = {
+					factor = 0
+					is_gestalt = yes
+				}
+				event_target:chosen_planet = {
+					add_deposit = d_trade_value_5
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					is_gestalt = yes
+				}
+				event_target:chosen_planet = {
+					add_deposit = d_trade_value_7
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					is_gestalt = yes
+				}
+				event_target:chosen_planet = {
+					add_deposit = d_trade_value_9
+				}
+			}
+		}
+	}
+
+	option = {
+		name = story.3336.option.alloys
+		trigger = {
+			event_target:chosen_planet = {
+				alloy_candidate = yes
+			}
+		}
+		locked_random_list = {
+			# Alloys
+			10 = {
+				modifier = {
+					factor = 0
+					event_target:chosen_planet = {
+						alloy_candidate = no
+					}
+				}
+				event_target:chosen_planet = {
+					add_deposit = d_alloys_3
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					event_target:chosen_planet = {
+						alloy_candidate = no
+					}
+				}
+				event_target:chosen_planet = {
+					add_deposit = d_alloys_4
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					event_target:chosen_planet = {
+						alloy_candidate = no
+					}
+				}
+				event_target:chosen_planet = {
+					add_deposit = d_alloys_5
+				}
+			}
+		}
+	}
+
+	option = {
+		name = story.3336.option.exotic_gases
+		trigger = {
+			event_target:chosen_planet = {
+				exotic_gas_candidate = yes
+			}
+		}
+		locked_random_list = {
+			# Exotic Gas
+			10 = {
+				modifier = {
+					factor = 0
+					event_target:chosen_planet = {
+						exotic_gas_candidate = no
+					}
+				}
+				event_target:chosen_planet = {
+					add_deposit = d_exotic_gases_3
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					event_target:chosen_planet = {
+						exotic_gas_candidate = no
+					}
+				}
+				event_target:chosen_planet = {
+					add_deposit = d_exotic_gases_4
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					event_target:chosen_planet = {
+						exotic_gas_candidate = no
+					}
+				}
+				event_target:chosen_planet = {
+					add_deposit = d_exotic_gases_5
+				}
+			}
+		}
+	}
+
+	option = {
+		name = story.3336.option.rare_crystals
+		trigger = {
+			event_target:chosen_planet = {
+				rare_crystal_candidate = yes
+			}
+		}
+		locked_random_list = {
+			# Rare Crystals
+			10 = {
+				modifier = {
+					factor = 0
+					event_target:chosen_planet = {
+						rare_crystal_candidate = no
+					}
+				}
+				event_target:chosen_planet = {
+					add_deposit = d_rare_crystals_3
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					event_target:chosen_planet = {
+						rare_crystal_candidate = no
+					}
+				}
+				event_target:chosen_planet = {
+					add_deposit = d_rare_crystals_4
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					event_target:chosen_planet = {
+						rare_crystal_candidate = no
+					}
+				}
+				event_target:chosen_planet = {
+					add_deposit = d_rare_crystals_5
+				}
+			}
+		}
+	}
+
+	option = {
+		name = story.3336.option.volatile_motes
+		trigger = {
+			event_target:chosen_planet = {
+				volatile_motes_candidate = yes
+			}
+		}
+		locked_random_list = {
+			# Volatile Motes
+			10 = {
+				modifier = {
+					factor = 0
+					event_target:chosen_planet = {
+						volatile_motes_candidate = no
+					}
+				}
+				event_target:chosen_planet = {
+					add_deposit = d_volatile_motes_3
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					event_target:chosen_planet = {
+						volatile_motes_candidate = no
+					}
+				}
+				event_target:chosen_planet = {
+					add_deposit = d_volatile_motes_4
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					event_target:chosen_planet = {
+						volatile_motes_candidate = no
+					}
+				}
+				event_target:chosen_planet = {
+					add_deposit = d_volatile_motes_5
+				}
+			}
+		}
+	}
+
+	#option = {
+	#	name = "Back"
+
+	#	country_event = {
+	#		id = story.335
+	#	}
+	#}
+
+	option = {
+		name = "Move the Surveyor elsewhere."
+
+		set_timed_country_flag = { flag = relic_surveyor_activated days = @triumph_duration_extremely_short }
+	}
+}

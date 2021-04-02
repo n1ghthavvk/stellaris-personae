@@ -1,0 +1,107 @@
+
+namespace = ancrel
+
+country_event = {
+	id = ancrel.10000
+	title = "ancrel.10000.name"
+	desc = "ancrel.10000.desc"
+	picture = GFX_evt_ancient_records
+	
+	is_triggered_only = yes
+
+	immediate = {
+		country_event = {
+			id = ancrel.11111
+			days = 720
+		}
+	}
+
+	option = {
+		name = ancrel.10000.option.arcane_insight
+		country_event = {
+			id = ancrel.10002
+		}
+	}
+
+	option = {
+		name = ancrel.10000.option.ancient_records
+		country_event = {
+			id = ancrel.10003
+		}
+	}
+
+	option = {
+		name = ancrel.10000.option.nano_forge
+		country_event = {
+			id = ancrel.10004
+		}
+	}
+
+	option = {
+		name = ancrel.10000.option.sky_dome
+		country_event = {
+			id = ancrel.10005
+		}
+	}
+
+	option = {
+		name = ancrel.10000.option.dimensional_fabricator
+		country_event = {
+			id = ancrel.10006
+		}
+	}
+
+	option = {
+		name = ancrel.10000.option.affluence_center
+		country_event = {
+			id = ancrel.10007
+		}
+	}
+
+	option = {
+		name = ancrel.10000.option.nourishment_center
+		country_event = {
+			id = ancrel.10008
+		}
+	}
+	
+	option = {
+		name = ancrel.10000.option.class_4_singularity
+		country_event = {
+			id = ancrel.10009
+		}
+	}
+}
+
+country_event = {
+	id = ancrel.11111
+	title = "ancrel.11111.name"
+	desc = "ancrel.11111.desc"
+	picture = GFX_evt_ancient_records
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ancrel.11111.option.yes
+		trigger = {
+			has_resource = {
+				amount = 5
+				type = minor_artifacts
+			}
+		}
+		add_resource = {
+			minor_artifacts = -5
+		}
+		add_modifier = {
+			modifier = "arcane_deciphering_cooldown" 
+			days = 720
+		}
+		country_event = {
+			id = ancrel.10000
+		}
+	}
+
+	option = {
+		name = ancrel.11111.option.no
+	}
+}

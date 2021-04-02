@@ -1,0 +1,58 @@
+@distance = 50
+@base_moon_distance = 10
+
+hyacinth_system = {
+	class = "rl_standard_stars"
+	flags = { hyacinth_system }
+
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		count = 2
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+		class = random_non_colonizable
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = 1
+			class = random_non_colonizable
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		orbit_angle = { min = 90 max = 270 }
+		class = pc_barren
+		flags = { hyacinth_planet }
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		orbit_angle = { min = 90 max = 270 }
+		class = pc_gas_giant
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = 3
+			class = random_non_colonizable
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+}

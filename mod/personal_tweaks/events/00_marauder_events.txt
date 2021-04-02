@@ -1,0 +1,26 @@
+namespace = marauder
+
+# Horde Triggered Through Destruction of Stations
+country_event = {
+	id = marauder.525
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_global_flag = marauder_crisis_started }
+		is_country_type = dormant_marauders
+		fromfrom = { is_ship_size = marauder_void_dwelling }
+		from = { is_country_type = default }
+		count_owned_ship = {
+			limit = { is_ship_size = marauder_void_dwelling }
+			count >= 3
+		}
+	}
+
+	immediate = {
+		from = { save_event_target_as = awakened_horde }
+		set_global_flag = horde_triggered
+		country_event = { id = marauder.500 }
+	}
+}

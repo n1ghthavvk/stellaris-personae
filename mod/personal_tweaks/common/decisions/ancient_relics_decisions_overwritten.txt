@@ -1,0 +1,40 @@
+##########################################################################
+# Ancient Relics Decisions
+##########################################################################
+@minor_artifact_decision_cost = 2
+@minor_artifact_decision_duration = 3600
+
+
+decision_survey_galactic_object = {
+	owned_planets_only = no
+	sound = "relic_activation_the_surveyor"
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 25
+		}
+	}
+
+	potential = {
+		space_owner = {
+			is_same_value = from
+			has_country_flag = relic_surveyor_activated
+		}
+	}
+
+	effect = {
+		custom_tooltip = relic_surveyor_active
+		hidden_effect = {
+			space_owner = {
+				remove_country_flag = relic_surveyor_activated
+			}
+		}
+		save_global_event_target_as = chosen_planet
+		space_owner = {
+			country_event = { 
+				id = story.3336
+			}
+		}
+	}
+}

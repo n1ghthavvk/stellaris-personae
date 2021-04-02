@@ -1,0 +1,77 @@
+# LIOS
+GAS_CLOUDY_CAT = {
+	desc = "GAS_CLOUDY_DESC"
+	picture = "GFX_evt_atmospheric_flight"
+	level = 1
+	
+	spawn_chance = {
+		modifier = {
+			add = 99999 # TODO
+			is_planet_class = pc_gas_giant
+		}
+	}
+	
+	on_success = anomaly.240
+}
+
+terraforming_candidate_category = {
+	desc = "terraforming_candidate_category_desc"
+	picture = GFX_evt_drilling_for_gas
+	level = 2
+	
+	spawn_chance = {		
+		modifier = {
+			add = 99999 # was 0.5 # 3 is normal
+			NOT = { has_modifier = terraforming_candidate }
+			OR = {
+				is_planet_class = pc_barren
+				is_planet_class = pc_barren_cold
+			}	
+			planet_size > 9
+			planet_size < 26	
+			solar_system = {
+				NOR = {
+					is_star_class = sc_black_hole
+					is_star_class = sc_neutron_star
+					is_star_class = sc_pulsar
+				}
+			}
+		}
+	}
+	
+	on_success = {
+		1 = {
+			anomaly_event = anomaly.2575
+			max_once = no
+		}
+	}
+}
+
+debris_gasgiant_category_temp = {
+	desc = "debris_gasgiant_category_temp_desc"
+	picture = "GFX_evt_ship_in_orbit"
+	level = 8
+
+	max_once_global = yes
+	
+	null_spawn_chance = 0.01  # 35% chance to spawn
+	
+	spawn_chance = {
+		modifier = {
+			add = 99999
+			has_distar = yes
+			is_planet_class = pc_gas_giant
+		}
+		modifier = {
+			factor = 0
+			from.owner = {
+				OR = {
+					species_portrait = mam5
+					species_portrait = fun4
+				}
+			}
+		}
+	}
+	
+	on_success = distar.1000
+}

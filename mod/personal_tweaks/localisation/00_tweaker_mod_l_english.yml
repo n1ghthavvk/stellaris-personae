@@ -1,0 +1,35 @@
+﻿l_english:
+
+    story.3336.option.energy: "£energy£ Energy"
+    story.3336.option.minerals: "£minerals£ Minerals"
+    story.3336.option.physics: "£physics£ Physics Research"
+    story.3336.option.society: "£society£ Society Research"
+    story.3336.option.engineering: "£engineering£ Engineering Research"
+    story.3336.option.trade_income: "£trade_value£ Trade"
+    story.3336.option.alloys: "£alloys£ Alloys"
+    story.3336.option.exotic_gases: "£exotic_gases£ Exotic Gases"
+    story.3336.option.rare_crystals: "£rare_crystals£ Rare Crystals"
+    story.3336.option.volatile_motes: "£volatile_motes£ Volatile Motes"
+
+    relic_triumph_cooldown_extremely_short: "\n$relic_activation_cooldown$: £time£ §Y600§!"
+
+    decision_survey_galactic_object:1 "Deploy the Surveyor"
+    decision_survey_galactic_object_desc:0 "The remarkable Surveyor is able to prospect for new deposits, far deeper than conventional technology."
+
+    ancrel.10000.name:0 "$tech_arcane_deciphering$"
+    ancrel.10000.desc:0 "Choose a goal the scientists should work towards. Study of our ancient artifacts should not be permitted without the proper direction."
+
+    ancrel.10000.option.arcane_insight: "Focus on applying their knowledge to our own scientific process."
+    ancrel.10000.option.ancient_records: "Search for a way to reach a breakthrough in one of our own projects."
+    ancrel.10000.option.nano_forge: "Reconstruct a Nano Forge."
+    ancrel.10000.option.sky_dome: "Reconstruct a Sky Dome."
+    ancrel.10000.option.dimensional_fabricator: "Reconstruct a Dimensional Fabricator."
+    ancrel.10000.option.affluence_center: "Reconstruct an Affluence Center."
+    ancrel.10000.option.nourishment_center: "Reconstruct a Nourishment Center."
+    ancrel.10000.option.class_4_singularity: "Reconstruct a Class 4 Singularity."
+
+    ancrel.11111.name:0 "$tech_arcane_deciphering$"
+    ancrel.11111.desc:0 "Time has passed and more minor artifacts have been broadly categorized. Should we decipher their meaning?"
+
+    ancrel.11111.option.yes: "Yes. Instruct the scientists at once."
+    ancrel.11111.option.no: "No. These artifacts are needed elsewhere."

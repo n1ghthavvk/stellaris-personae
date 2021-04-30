@@ -29,14 +29,14 @@ intercepting_history_system_initializer_01 = {
 	
 	# Inner misc. planets
 	planet = {
-		count = 3
+		count = 3 # { min = 1 max = 3 }
 		orbit_distance = 20
 		orbit_angle = { min = 90 max = 270 }
 		
 		change_orbit = @base_moon_distance
 		
 		moon = {
-			count = 1
+			count = 1 # { min = 0 max = 1 }
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
 		}
@@ -96,14 +96,14 @@ intercepting_history_system_initializer_01 = {
 
 	# Outer misc. planets
 	planet = {
-		count = 3
+		count = 3 # { min = 1 max = 3 }
 		orbit_distance = 20
 		orbit_angle = { min = 90 max = 270 }
 		
 		change_orbit = @base_moon_distance
 		
 		moon = {
-			count = 2
+			count = 2 # { min = 0 max = 2 }
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
 		}
@@ -136,14 +136,14 @@ intercepting_history_system_initializer_02 = {
 	
 	# Inner misc. planets
 	planet = {
-		count = 2
+		count = 2 # { min = 1 max = 2 }
 		orbit_distance = 20
 		orbit_angle = { min = 90 max = 270 }
 		
 		change_orbit = @base_moon_distance
 		
 		moon = {
-			count = 1
+			count = 1 # { min = 0 max = 1 }
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
 		}
@@ -187,14 +187,14 @@ intercepting_history_system_initializer_02 = {
 
 	# Outer misc. planets
 	planet = {
-		count = 3
+		count = 3 # { min = 2 max = 3 }
 		orbit_distance = 20
 		orbit_angle = { min = 90 max = 270 }
 		
 		change_orbit = @base_moon_distance
 		
 		moon = {
-			count = 1
+			count = 1 # { min = 0 max = 1 }
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
 		}
@@ -227,14 +227,14 @@ relentless_pursuit_system_initializer_01 = {
 	
 	# Inner misc. planets
 	planet = {
-		count = 5
+		count = 5 # { min = 2 max = 5 }
 		orbit_distance = 20
 		orbit_angle = { min = 90 max = 270 }
 		
 		change_orbit = @base_moon_distance
 		
 		moon = {
-			count = 1
+			count = 1 # { min = 0 max = 1 }
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
 		}
@@ -281,14 +281,14 @@ relentless_pursuit_system_initializer_01 = {
 
 	# Outer misc. planets
 	planet = {
-		count = 3
+		count = 3 # { min = 2 max = 3 }
 		orbit_distance = 20
 		orbit_angle = { min = 90 max = 270 }
 		
 		change_orbit = @base_moon_distance
 		
 		moon = {
-			count = 2
+			count = 2 # { min = 0 max = 2 }
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
 		}
@@ -321,14 +321,14 @@ relentless_pursuit_system_initializer_02 = {
 	
 	# Inner misc. planets
 	planet = {
-		count = 2
+		count = 2 # { min = 1 max = 2 }
 		orbit_distance = 20
 		orbit_angle = { min = 90 max = 270 }
 		
 		change_orbit = @base_moon_distance
 		
 		moon = {
-			count = 1
+			count = 1 # { min = 0 max = 1 }
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
 		}
@@ -398,14 +398,14 @@ relentless_pursuit_system_initializer_02 = {
 
 	# Outer misc. planets
 	planet = {
-		count = 3
+		count = 3 # { min = 2 max = 3 }
 		orbit_distance = 20
 		orbit_angle = { min = 90 max = 270 }
 		
 		change_orbit = @base_moon_distance
 		
 		moon = {
-			count = 1
+			count = 1 # { min = 0 max = 1 }
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
 		}

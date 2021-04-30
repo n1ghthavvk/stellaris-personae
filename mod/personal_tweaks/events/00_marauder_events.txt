@@ -20,6 +20,7 @@ country_event = {
 
 	immediate = {
 		from = { save_event_target_as = awakened_horde }
+		# Instead of a random chance, the Khan will assuredly awaken
 		set_global_flag = horde_triggered
 		country_event = { id = marauder.500 }
 	}

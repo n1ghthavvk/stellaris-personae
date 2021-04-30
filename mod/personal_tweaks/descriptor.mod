@@ -4,4 +4,4 @@ tags={
 	"Fixes"
 }
 name="Personal Tweaks"
-supported_version="2.8.*"
+supported_version="3.0.*"

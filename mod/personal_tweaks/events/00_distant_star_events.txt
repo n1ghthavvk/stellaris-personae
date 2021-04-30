@@ -1,5 +1,5 @@
 # FIOS
-##### STAR CRAZY ######
+
 namespace = distar
 country_event = {
 	id = distar.194
@@ -62,6 +62,7 @@ country_event = {
 			min = @tier2researchmin
 			max = @tier2researchmax
 		}
+		# The scientist will be reinstated
 		random_owned_ship = {
 			limit = {
 				is_ship_class = shipclass_science_ship
@@ -83,131 +84,133 @@ country_event = {
 	}
 }
 
-ship_event = {
-	id = distar.1070
-	title = "distar.1070.name"
-	desc = "distar.1070.desc"
-	picture = GFX_evt_ship_in_orbit_2
-	show_sound = event_mystic_reveal
-	location = From
-	is_triggered_only = yes
-	trigger = {
-		owner = {
-			NOT = {
-				has_ethic = ethic_gestalt_consciousness
-			}
-		}
-	}
-	immediate = {
-		leader = {
-			save_global_event_target_as = crazy_science_officer
-		}
-		owner = {
-			set_country_flag = star_crazy
-		}
-		save_event_target_as = crazy_scientist_ship
-	}
-	option = {
-		name = distar.1070.a
-		hidden_effect = {
-			from.solar_system = {
-				closest_system = {
-					min_steps = 2
-					max_steps = 20
-					limit = {
-						NOR = {
-							exists = space_owner
-							has_star_flag = hostile_system
-						}
-						star = {
-							NOR = {
-								is_star_class = sc_black_hole
-								has_deposit_for = shipclass_mining_station
-							}
-						}
-					}
-					save_event_target_as = anomalous_star_system
-					star = {
-						save_global_event_target_as = anomalous_star
-					}
-				}
-			}
-			### Fallback Version with lighter requirements
-			if = {
-				limit = {
-					NOT = {
-						exists = event_target:anomalous_star_system
-					}
-				}
-				from.solar_system = {
-					closest_system = {
-						min_steps = 2
-						max_steps = 30
-						limit = {
-							NOT = {
-								has_star_flag = hostile_system
-							}
-							star = {
-								NOT = {
-									is_star_class = sc_black_hole
-								}
-							}
-						}
-						save_event_target_as = anomalous_star_system
-						star = {
-							save_global_event_target_as = anomalous_star
-						}
-					}
-				}
-			}
-			### Fallback Version that creates an entirely new system for the event  
-			if = {
-				limit = {
-					NOT = {
-						exists = event_target:anomalous_star_system
-					}
-				}
-				owner = {
-					random_system_within_border = {
-						spawn_system = {
-							min_distance = 10
-							max_distance = 30
-							max_jumps = 0
-							initializer = "star_crazy_fallback_system"
-						}
-					}
-					save_event_target_as = anomalous_star_system
-					star = {
-						save_global_event_target_as = anomalous_star
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				exists = event_target:anomalous_star_system
-			}
-			enable_special_project = {
-				name = "STAR_CRAZY"
-				location = event_target:anomalous_star
-				owner = root.owner
-			}
-		}
-		ELSE = {
-			hidden_effect = {
-				ship_event = {
-					id = distar.1071
-					days = 3
-				}
-			}
-		}
-	}
-	option = {
-		name = distar.1070.b
-		owner = {
-			add_resource = {
-				influence = 25
-			}
-		}
-	}
-}
+##### STAR CRAZY ######
+# ship_event = {
+# 	id = distar.1070
+# 	title = "distar.1070.name"
+# 	desc = "distar.1070.desc"
+# 	picture = GFX_evt_ship_in_orbit_2
+# 	show_sound = event_mystic_reveal
+# 	location = From
+# 	is_triggered_only = yes
+# 	trigger = {
+# 		owner = {
+# 			NOT = {
+# 				has_ethic = ethic_gestalt_consciousness
+# 			}
+# 		}
+# 	}
+# 	immediate = {
+# 		leader = {
+# 			save_global_event_target_as = crazy_science_officer
+# 		}
+# 		owner = {
+# 			set_country_flag = star_crazy
+# 		}
+# 		save_event_target_as = crazy_scientist_ship
+# 	}
+# 	option = {
+# 		name = distar.1070.a
+# 		hidden_effect = {
+# 			from.solar_system = {
+# 				closest_system = {
+# 					min_steps = 2
+# 					max_steps = 20
+# 					limit = {
+# 						NOR = {
+# 							exists = space_owner
+# 							has_star_flag = hostile_system
+# 						}
+# 						star = {
+# 							NOR = {
+# 								is_star_class = sc_black_hole
+# 								has_deposit_for = shipclass_mining_station
+# 							}
+# 						}
+# 					}
+# 					save_event_target_as = anomalous_star_system
+# 					star = {
+# 						save_global_event_target_as = anomalous_star
+# 					}
+# 				}
+# 			}
+# 			### Fallback Version with lighter requirements
+# 			if = {
+# 				limit = {
+# 					NOT = {
+# 						exists = event_target:anomalous_star_system
+# 					}
+# 				}
+# 				from.solar_system = {
+# 					closest_system = {
+# 						min_steps = 2
+# 						max_steps = 30
+# 						limit = {
+# 							NOT = {
+# 								has_star_flag = hostile_system
+# 							}
+# 							star = {
+# 								NOT = {
+# 									is_star_class = sc_black_hole
+# 								}
+# 							}
+# 						}
+# 						save_event_target_as = anomalous_star_system
+# 						star = {
+# 							save_global_event_target_as = anomalous_star
+# 						}
+# 					}
+# 				}
+# 			}
+# 			### Fallback Version that creates an entirely new system for the event  
+# 			if = {
+# 				limit = {
+# 					NOT = {
+# 						exists = event_target:anomalous_star_system
+# 					}
+# 				}
+# 				owner = {
+# 					random_system_within_border = {
+# 						spawn_system = {
+# 							min_distance = 10
+# 							max_distance = 30
+# 							max_jumps = 0
+# 							initializer = "star_crazy_fallback_system"
+# 						}
+# 						add_extra_hyperlane_to_spawned_system_effect = yes
+# 					}
+# 					save_event_target_as = anomalous_star_system
+# 					star = {
+# 						save_global_event_target_as = anomalous_star
+# 					}
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				exists = event_target:anomalous_star_system
+# 			}
+# 			enable_special_project = {
+# 				name = "STAR_CRAZY"
+# 				location = event_target:anomalous_star
+# 				owner = root.owner
+# 			}
+# 		}
+# 		ELSE = {
+# 			hidden_effect = {
+# 				ship_event = {
+# 					id = distar.1071
+# 					days = 3
+# 				}
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = distar.1070.b
+# 		owner = {
+# 			add_resource = {
+# 				influence = 25
+# 			}
+# 		}
+# 	}
+# }

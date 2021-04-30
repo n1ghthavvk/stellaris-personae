@@ -19,14 +19,14 @@ star_crazy_fallback_system = {	# Fallback solution for Star Crazy Event (distar.
 	change_orbit = 45
 	
 	planet = {
-		count = 8
+		count = 8 # { min = 2 max = 8 }
 		orbit_distance = 20
 		orbit_angle = { min = 90 max = 270 }
 		
 		change_orbit = @base_moon_distance
 		
 		moon = {
-			count = 1
+			count = 1 # { min = 0 max = 1 }
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
 		}
@@ -96,7 +96,7 @@ distantstars_init_01 = {
 		moon = {
 			name = "NAME_Dora-Fu-Rem"
 			class = "pc_broken"
-			size = { min = 8 max = 22 }
+			size = { min = 8 max = 22 } # dafuq Paradox? moon > planet
 			orbit_distance = 12
 			orbit_angle = 40
 			has_ring = no
@@ -161,7 +161,7 @@ distantstars_init_01 = {
 		moon = {
 			name = "NAME_Dora-Enar-Fiir"
 			class = "pc_barren_cold"
-			size = 22
+			size = { min = 8 max = 22 }
 			orbit_distance = 10
 			orbit_angle = 110
 			has_ring = no
@@ -185,7 +185,7 @@ distantstars_init_01 = {
 		moon = {
 			name = "NAME_Dora-Got-Fiir"
 			class = "pc_gray_goo"
-			size = 22
+			size = 22 # { min = 8 max = 22 }
 			orbit_distance = 4
 			orbit_angle = -155
 			has_ring = no
@@ -205,7 +205,7 @@ distantstars_init_01 = {
 		moon = {
 			name = "NAME_Dora-Enar-Toor"
 			class = "pc_gray_goo"
-			size = 22
+			size = 22 # { min = 8 max = 22 }
 			orbit_distance = 12
 			orbit_angle = 320
 			has_ring = no
@@ -395,7 +395,7 @@ distantstars_init_03 = {
 	}
 	
 	planet = {
-		count = 2
+		count = 2 # { min = 1 max = 2 }
 		orbit_distance = 35
 		class = pc_gas_giant
 		orbit_angle = { min = 90 max = 270 }
@@ -404,7 +404,7 @@ distantstars_init_03 = {
 		change_orbit = @base_moon_distance
 		
 		moon = {
-			count = 3
+			count = 3 # { min = 1 max = 3 }
 			size = 20
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 6
@@ -436,7 +436,7 @@ distantstars_init_04 = {
 	change_orbit = 120
 	
 	planet = {
-		count = { min = 3 max = 6 }
+		count = 6 # { min = 3 max = 6 }
 		class = pc_asteroid
 		orbit_distance = 0
 		orbit_angle = { min = 90 max = 270 }
@@ -522,7 +522,7 @@ distantstars_init_05 = {
 	change_orbit = 40
 
 	planet = {
-		count = { min = 2 max = 4 }
+		count = 4 # { min = 2 max = 4 }
 		class = pc_asteroid
 		orbit_distance = 0
 		orbit_angle = { min = 90 max = 270 }
@@ -599,7 +599,7 @@ distantstars_init_01b = {
 	change_orbit = 90
 	
 	planet = {
-		count = { min = 3 max = 6 }
+		count = 6 # { min = 3 max = 6 }
 		class = pc_asteroid
 		orbit_distance = 0
 		orbit_angle = { min = 90 max = 270 }
@@ -667,7 +667,7 @@ distantstars_init_02b = {
 	change_orbit = 110
 	
 	planet = {
-		count = { min = 3 max = 6 }
+		count = 6 # { min = 3 max = 6 }
 		class = pc_asteroid
 		orbit_distance = 0
 		orbit_angle = { min = 90 max = 270 }
@@ -721,7 +721,7 @@ distantstars_init_03b = {
 	change_orbit = 120
 	
 	planet = {
-		count = { min = 3 max = 6 }
+		count = 6 # { min = 3 max = 6 }
 		class = pc_asteroid
 		orbit_distance = 0
 		orbit_angle = { min = 90 max = 270 }

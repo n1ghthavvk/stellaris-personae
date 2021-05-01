@@ -35,7 +35,7 @@ star_crazy_fallback_system = {	# Fallback solution for Star Crazy Event (distar.
 
 # L-Cluster Entrance
 distantstars_init_01 = {
-	class = "rl_standard_stars"
+	class = "sc_black_hole"
 	name = "NAME_Final_Egress"
 	
 	usage = misc_system_init
@@ -50,7 +50,7 @@ distantstars_init_01 = {
 
 	planet = {
 		name = "NAME_Final_Egress"
-		class = "pc_g_star"
+		class = "pc_black_hole"
 		orbit_distance = 0
 		orbit_angle = 1
 		size = 30

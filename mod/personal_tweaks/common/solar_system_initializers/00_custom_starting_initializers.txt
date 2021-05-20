@@ -24,7 +24,7 @@ custom_starting_init_01 = {
 			}
 		}
 
-		generate_home_system_resources = yes
+		generate_perfect_home_system_resources = yes
 	}
 
 	planet = {

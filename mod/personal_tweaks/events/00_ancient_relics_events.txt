@@ -85,7 +85,7 @@ country_event = {
 		name = ancrel.11111.option.yes
 		trigger = {
 			has_resource = {
-				amount = 5
+				amount >= 5
 				type = minor_artifacts
 			}
 		}
@@ -102,6 +102,22 @@ country_event = {
 	}
 
 	option = {
+		trigger = {
+			has_resource = {
+				amount >= 5
+				type = minor_artifacts
+			}
+		}
 		name = ancrel.11111.option.no
+	}
+
+	option = {
+		trigger = {
+			has_resource = {
+				amount < 5
+				type = minor_artifacts
+			}
+		}
+		name = ancrel.11111.option.cant
 	}
 }

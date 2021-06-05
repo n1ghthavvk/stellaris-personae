@@ -16,6 +16,10 @@
     decision_survey_galactic_object:1 "Deploy the Surveyor"
     decision_survey_galactic_object_desc:0 "The remarkable Surveyor is able to prospect for new deposits, far deeper than conventional technology."
 
+    d_trade_value_5_desc:0 "Various natural and artificial features increase the revenue of this colony."
+    d_trade_value_7_desc:0 "Various natural and artificial features increase the revenue of this colony."
+    d_trade_value_9_desc:0 "Various natural and artificial features increase the revenue of this colony."
+
     ancrel.10000.name:0 "$tech_arcane_deciphering$"
     ancrel.10000.desc:0 "Choose a goal the scientists should work towards. Study of our ancient artifacts should not be permitted without the proper direction."
 
@@ -33,3 +37,4 @@
 
     ancrel.11111.option.yes: "Yes. Instruct the scientists at once."
     ancrel.11111.option.no: "No. These artifacts are needed elsewhere."
+    ancrel.11111.option.cant: "Impossible. There are not enough minor artifacts in our possession... yet."

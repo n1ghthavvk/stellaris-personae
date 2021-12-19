@@ -1,0 +1,5 @@
+on_press_begin = {
+	events = {
+		guaranteeworm.1 # Ensure a black hole contains the worm
+	}
+}

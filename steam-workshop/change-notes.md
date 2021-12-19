@@ -4,4 +4,5 @@ Version 0.1.0
 * Changes "Arcane Deciphering" to let you choose which effect you want
 * Guarantees that the Galatron will be found by the first human player to gamble for it
 * Guarantees that the mid-game crisis Khan will spawn with a very high chance upon destroying a dwelling
+* Guarantees that the worm will spawn (if a free black hole is present)
 * Increases the chance to encounter the "Rubricator", "Paradise Planet / Vechtar Zavonia" as well as the "Barren Gas Giant" anomalies

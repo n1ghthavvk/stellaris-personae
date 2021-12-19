@@ -46,7 +46,7 @@ distantstars_init_01 = {
 		radius = 190
 	}
 
-	flags = { hostile_system lcluster lcluster1 lcluster_lgate }
+	flags = { hostile_system lcluster lcluster1 lcluster_lgate suppress_archaeological_sites }
 
 	planet = {
 		name = "NAME_Final_Egress"
@@ -247,7 +247,6 @@ distantstars_init_01 = {
 			type = lgate_base
 			orbit_angle = 225
 			orbit_distance = 360
-			location = solar_system
 		}
 	}
 }
@@ -266,7 +265,7 @@ distantstars_init_02 = {
 	usage = misc_system_init
 	usage_odds = 0
 
-	flags = { hostile_system lcluster lcluster2 }
+	flags = { hostile_system lcluster lcluster2 suppress_archaeological_sites }
 	
 	planet = {
 		count = 1
@@ -351,7 +350,7 @@ distantstars_init_03 = {
 	usage = misc_system_init
 	usage_odds = 0
 
-	flags = { hostile_system lcluster lcluster3 }
+	flags = { hostile_system lcluster lcluster3 suppress_archaeological_sites }
 	
 	planet = {
 		count = 1
@@ -422,7 +421,7 @@ distantstars_init_04 = {
 	usage = misc_system_init
 	usage_odds = 0
 
-	flags = { hostile_system lcluster lcluster4 }
+	flags = { hostile_system lcluster lcluster4 suppress_archaeological_sites }
 	
 	planet = {
 		count = 1
@@ -436,7 +435,7 @@ distantstars_init_04 = {
 	change_orbit = 120
 	
 	planet = {
-		count = 6 # { min = 3 max = 6 }
+		count = { min = 3 max = 6 }
 		class = pc_asteroid
 		orbit_distance = 0
 		orbit_angle = { min = 90 max = 270 }
@@ -473,7 +472,7 @@ distantstars_init_04 = {
 
 distantstars_init_05 = {
 	class = "sc_trinary_2"
-	flags = { hostile_system lcluster lcluster5 graygoo_factory_system }
+	flags = { hostile_system lcluster lcluster5 graygoo_factory_system suppress_archaeological_sites }
 
 	usage = misc_system_init
 	usage_odds = 0
@@ -522,7 +521,7 @@ distantstars_init_05 = {
 	change_orbit = 40
 
 	planet = {
-		count = 4 # { min = 2 max = 4 }
+		count = { min = 2 max = 4 }
 		class = pc_asteroid
 		orbit_distance = 0
 		orbit_angle = { min = 90 max = 270 }
@@ -567,7 +566,7 @@ distantstars_init_01b = {
 	usage = misc_system_init
 	usage_odds = 0
 
-	flags = { hostile_system lcluster lcluster1b }
+	flags = { hostile_system lcluster lcluster1b suppress_archaeological_sites }
 	
 	planet = {
 		count = 1
@@ -599,7 +598,7 @@ distantstars_init_01b = {
 	change_orbit = 90
 	
 	planet = {
-		count = 6 # { min = 3 max = 6 }
+		count = { min = 3 max = 6 }
 		class = pc_asteroid
 		orbit_distance = 0
 		orbit_angle = { min = 90 max = 270 }
@@ -645,7 +644,7 @@ distantstars_init_02b = {
 	usage = misc_system_init
 	usage_odds = 0
 
-	flags = { hostile_system lcluster lcluster2b }
+	flags = { hostile_system lcluster lcluster2b suppress_archaeological_sites }
 	
 	planet = {
 		count = 1
@@ -667,7 +666,7 @@ distantstars_init_02b = {
 	change_orbit = 110
 	
 	planet = {
-		count = 6 # { min = 3 max = 6 }
+		count = { min = 3 max = 6 }
 		class = pc_asteroid
 		orbit_distance = 0
 		orbit_angle = { min = 90 max = 270 }
@@ -707,7 +706,7 @@ distantstars_init_03b = {
 	usage = misc_system_init
 	usage_odds = 0
 
-	flags = { hostile_system lcluster lcluster3b }
+	flags = { hostile_system lcluster lcluster3b suppress_archaeological_sites }
 	
 	planet = {
 		count = 1
@@ -721,7 +720,7 @@ distantstars_init_03b = {
 	change_orbit = 120
 	
 	planet = {
-		count = 6 # { min = 3 max = 6 }
+		count = { min = 3 max = 6 }
 		class = pc_asteroid
 		orbit_distance = 0
 		orbit_angle = { min = 90 max = 270 }
@@ -769,7 +768,7 @@ distantstars_init_04b = {
 	usage = misc_system_init
 	usage_odds = 0
 
-	flags = { hostile_system lcluster lcluster4b }
+	flags = { hostile_system lcluster lcluster4b suppress_archaeological_sites }
 	
 	planet = {
 		count = 1

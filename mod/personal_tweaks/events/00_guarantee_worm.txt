@@ -1,0 +1,23 @@
+namespace = guaranteeworm
+
+
+event = {
+	id = guaranteeworm.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					any_system = {
+						has_star_flag = horizonsignal_spawn
+					}
+				}
+			}
+			country_event = {
+				id = akx.8000
+			}
+		}
+	}
+}

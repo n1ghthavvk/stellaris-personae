@@ -39,7 +39,7 @@ debris_gasgiant_category_temp = {
 
 	max_once_global = yes
 	
-	null_spawn_chance = 0.01  # 0.65 for 35% chance to spawn
+	null_spawn_chance = 0.001  # 0.65 for 35% chance to spawn
 	
 	spawn_chance = {
 		modifier = {

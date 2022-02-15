@@ -95,6 +95,7 @@ country_event = {
 				# Give galatron to the first human player that asks for it nicely
 				modifier = {
 					factor = 99999
+					log = "99999 factor will be applied"
 					is_ai = no
 				}
 				set_country_flag = recent_galatron

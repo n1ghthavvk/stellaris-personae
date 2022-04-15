@@ -7,3 +7,4 @@ Version 0.1.0
 * Guarantees that the worm will spawn (if a free black hole is present)
 * Guarantees that the Nuministic Order will add "Numa's Breath" to a planet with size > 30 and increases the chance for the event massively # disabled
 * Increases the chance to encounter the "Rubricator", "Paradise Planet / Vechtar Zavonia" as well as the "Barren Gas Giant" anomalies
+* Guarantees "Binary System I" will spawn with 3 chances of habitable moons

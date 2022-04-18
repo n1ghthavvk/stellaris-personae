@@ -85,18 +85,20 @@ country_event = {
 	immediate = {
 		random_list = {
 			# Galatron
-			1 = {
+			10000 = {
 				modifier = {
 					factor = 0
 					any_playable_country = {
-						has_modifier = galatron_modifier
+						OR = {
+							has_modifier = galatron_modifier
+							has_country_flag = galatron_owner
+						}
 					}
 				}
 				# Give galatron to the first human player that asks for it nicely
 				modifier = {
-					factor = 99999
-					log = "99999 factor will be applied"
-					is_ai = no
+					factor = 0 # 0.001
+					is_ai = yes
 				}
 				set_country_flag = recent_galatron
 				set_country_flag = galatron_owner
@@ -114,10 +116,14 @@ country_event = {
 			# Regular contents
 			140 = {
 				random_list = {
-					100 = {
+					10000 = {
 						modifier = {
 							factor = 0
 							capital_scope = { has_modifier = ancient_trade_route }
+						}
+						modifier = {
+							factor = 0.01
+							is_ai = yes
 						}
 						set_country_flag = lootbox_contents_a
 					}

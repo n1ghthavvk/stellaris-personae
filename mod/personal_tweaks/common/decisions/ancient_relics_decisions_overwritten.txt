@@ -21,6 +21,28 @@ decision_survey_galactic_object = {
 			is_same_value = from
 			has_country_flag = relic_surveyor_activated
 		}
+		habitable_planet = no
+		is_artificial = no
+		NOR = {
+			is_planet_class = pc_ringworld_habitable_damaged
+			is_planet_class = pc_ringworld_tech_damaged
+			is_planet_class = pc_ringworld_tech
+			is_planet_class = pc_ringworld_seam
+			is_planet_class = pc_ringworld_seam_damaged
+		}
+		# check that the random list won't come up empty
+		OR = {
+			energy_candidate = yes
+			mineral_candidate = yes
+			research_candidate = yes
+			alloy_candidate = yes
+			exotic_gas_candidate = yes
+			rare_crystal_candidate = yes
+			volatile_motes_candidate = yes
+			space_owner = {
+				is_gestalt = no
+			}
+		}
 	}
 
 	effect = {

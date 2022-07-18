@@ -1,0 +1,21 @@
+namespace = specialist
+
+country_event = {
+	id = specialist.500
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_specialist_subject_type = { TYPE = scholarium }
+		any_planet_within_border = {
+			valid_for_scholarium_sensors = yes
+		}
+	}
+
+	immediate = {
+		random = {
+			chance = 99
+			trigger_scholarium_project_event = yes
+		}
+	}
+}

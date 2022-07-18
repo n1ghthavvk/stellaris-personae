@@ -9,3 +9,4 @@ Version 0.1.0
 * Increases the chance to encounter the "Rubricator", "Paradise Planet / Vechtar Zavonia" as well as the "Barren Gas Giant" anomalies
 * Guarantees "Binary System I" will spawn with 3 chances of habitable moons
 * Guarantees "Central Crystal Empire" will always spawn with Habitat Origin
+* Guarantees Scholarium Tech Cache

@@ -1,0 +1,37 @@
+# Scholarium Planetary Sensors
+special_project = {
+	key = "SCHOLARIUM_PLANETARY_SENSORS"
+	timelimit = -1
+	picture = GFX_evt_scholarium_anomaly
+	days_to_research = 60
+	icon = "gfx/interface/icons/situation_log/situation_log_tick.dds"
+	event_scope = ship_event
+	location = yes
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+
+	on_success = {
+		PREV = {
+			random_list = {
+				1 = { country_event = { id = specialist.905 scopes = { FROM = FROMFROM } } }
+				1 = { country_event = { id = specialist.910 scopes = { FROM = FROMFROM } } }
+				1 = { country_event = { id = specialist.915 scopes = { FROM = FROMFROM } } }
+				99 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							is_specialist_subject_tier = {
+								TYPE = scholarium
+								TIER = 3
+							}
+						}
+					}
+					country_event = { id = specialist.920 scopes = { FROM = FROMFROM } }
+				}
+			}
+		}
+	}
+}
